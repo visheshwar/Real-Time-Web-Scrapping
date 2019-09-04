@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    <center> Mobile City Center </center>
+{% endblock %}
+
+{% block body %}
+	<center>
+	<div class="panel panel-default panel-info class" style="width:70%">
+		<div class="panel-heading"><span style="left:0;">Mobile City Center to get Cheapest Mobile<span></div>
+  		<div class="panel-body">
+	    <form action="{{ url_for('hello') }}" method="post">
+	    	<div class="form-group">
+	    		<label for="query" style="left:0px;">Enter your query string (ex : samsung-nokia) </label>
+	    		<input type="text" class="form-control" id="query" name="name" placeholder="Enter the query">
+	  		</div>
+
+	        <!-- <input type="text" name="name" placeholder="Enter Your Query!" style="width:640px;"> -->
+	        <div class="form-group">
+	        	<button class="btn btn-primary" type="submit">Button</button>
+	        </div>
+	    </form>
+	   </div>
+	</div>
+	</center>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+    <center> Choose what fit's you Best .. !! </center>
+{% endblock %}
+
+{% block body %}
+	<table class="table table-striped">
+	<tr>
+		<th>
+			Image
+		</th>
+
+		<th>
+			Model | Price
+		</th>
+
+		<th>
+			Description
+		</th>
+
+		<th>
+			URL
+		</	th>
+	</tr>
+    {% for item in name %}
+    <tr>
+    	<td>
+	  		<a href = "{{ item[2] }}">
+	  		<img src="{{ item[0] }}" alt="Product Image" height="120" width="80">
+	  		</a>
+	  	</td>
+	  	<td>
+      		{{ item[1] }}
+      	</td>
+      	<td>
+	  	</td>
+      	<td>
+	  		<a href="{{ item[2] }}">click here...</a>
+	  	</td>
+	 </tr>
+    {% endfor %}
+   	</table>
+<a href="{{ url_for('index') }}">Go back</a>
+
+{% endblock %}
